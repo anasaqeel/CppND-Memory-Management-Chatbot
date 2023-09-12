@@ -29,6 +29,14 @@ public:
 
     //// STUDENT CODE
     ////
+    /* the const in the copy constructor and
+    assignment operator is to make sure or promise
+    that we're just passing the data without modification
+    since they are passed by reference */
+    ChatBot(const ChatBot &source); //Copy constructor
+    ChatBot &operator=(const ChatBot &source);//assignment operator
+    ChatBot(ChatBot &&source); //Move constructor
+    ChatBot &operator=(ChatBot &&source); // move assignment operator
 
     ////
     //// EOF STUDENT CODE
